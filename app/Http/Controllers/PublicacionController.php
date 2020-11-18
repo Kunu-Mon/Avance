@@ -157,4 +157,20 @@ class PublicacionController extends Controller
         // return redirect(route('borrarDato'));  //nombre de rutas en laravel se le ponen algun nombre a la ruta /ejm/ ->name('borrarDato');
 
     }
+
+
+    public function list()
+    { 
+        $usuarios = Usuario::all();
+        return view("publicaciones1.list", [ "usuario" => $usuarios]);
+     
+    }
+
+    public function getUsuarios(Request $request)
+    {  
+         $p=Usuario::select('nombre','email')->where('id',$request->id)->first();
+   return response()->json($p);
+    }
+
+
 }

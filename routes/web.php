@@ -23,3 +23,8 @@ Route::resource('usuario','UsuarioController');
 Route::resource('salidav','PublicacionController');
 
 
+Route::get('listUsuarios','PublicacionController@list');
+
+Route::get('/getUsuarios','PublicacionController@getUsuarios');
+
+

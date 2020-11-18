@@ -11,7 +11,7 @@ class Publicados extends Model
    // protected $fillable = ['titulo', 'cuerpo'];
 
     protected $table = "publicaciones";
-    protected $primaryKey = 'codigo';
+   
     protected $fillable = ['titulo', 'cuerpo'];
     public $timestamps = false;
 
