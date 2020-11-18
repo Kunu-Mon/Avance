@@ -33,19 +33,19 @@
 <!-- Formulario tambien llama al controlador  // atraves del metodo -- 'method'=>'patch' -->
 {{Form::open(array('action'=>array('PublicacionController@update', $publicaciones->id),'method'=>'patch'))}}
 
-<!--
+
 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
     <div class="form-group">
         <label for="Role">Nombre De quien Publica</label>
         <select name="usuarios_id" id="usuarios_id" class="form-control-plaintext form-control selectpicker" data-livesearch="true" value="{{$publicaciones->usuarios_id}}" >  <!--readonly -> valor estatico-->
-<!--           <option value=""  disabled selected>Nombre De Usuario:</option>
-          //  @foreach($usuario as $usuario)
-        //    <option value="{{$usuario->id}}">{{$usuario->nombre}}
+         <option value="{{$publicaciones->usuarios_id}}"  disabled selected>{{$publicaciones->usuarios->nombre}}</option>
+           @foreach($usuario as $usuario)
+            <option value="{{$usuario->id}}">{{$usuario->nombre}} 
             </option>
             @endforeach
         </select>
     </div>
-</div>  -->
+</div>  
 
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
     <div class="form-group">
